@@ -1,0 +1,71 @@
+@import '../../SCSS/utilities';
+
+.bg {
+    background-color: $scnd-clr !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+
+    .nvbar {
+        @include flex(row, space-between, center);
+
+        height: 5rem;
+
+        .links {
+            @include flex(row, center, center);
+            gap: 3rem;
+
+            .link {
+                overflow: hidden;
+
+                a {
+                    text-decoration: none;
+                    @include font(#fff, 1rem, 500);
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: $scnd-clr;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    padding: 1rem;
+                    margin-top: 1.75rem;
+                    z-index: 1;
+                }
+
+                &:hover .dropdown-content {
+                    @include flex(column, center, flex-start);
+                }
+            }
+
+
+
+        }
+    }
+
+    .nav-tools {
+        @include flex(row, center, center);
+        gap: 1rem;
+
+        .search {
+            svg {
+                cursor: pointer;
+            }
+        }
+
+        .mode {
+            background-color: $natural-one;
+            padding: 0.3rem;
+            border: none;
+            border-radius: 0.3rem;
+
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+}

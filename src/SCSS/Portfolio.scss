@@ -1,0 +1,142 @@
+@import "./utilities";
+
+.portfolio {
+    background-color: $prm-clr;
+
+
+    section {
+        @include flex(column, center, flex-start);
+        gap: 3rem !important;
+        padding: 4rem 0 5rem 0;
+
+
+        .portfolio-head {
+            @include flex(row, space-between, flex-end);
+            gap: 44rem;
+
+            .infos {
+                @include flex(column, center, flex-start);
+                gap: 0.5rem;
+
+                p.subsubtitel {
+                    @include font($scnd-clr, 1.2rem, 600)
+                }
+
+                p.titel {
+                    @include font(#fff, 2.7rem, 500);
+                }
+
+            }
+
+            button {
+                @include flex(row, space-between, center);
+                gap: 1rem;
+                cursor: pointer;
+                background-color: $scnd-clr;
+                border: 3px $scnd-clr solid;
+                padding: 1rem 3rem;
+                @include font(#fff, 1.2rem, 600);
+                border-bottom-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .fields {
+            @include flex(row, flex-start, center);
+            gap: 3rem;
+
+            button {
+
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                // padding: 1rem;
+                @include font(#fff, 1.2rem, 400);
+
+                span {
+                    visibility: hidden;
+                    @include font(#fff, 4.92rem, 400);
+                }
+
+                &:hover {
+                    @include font($scnd-clr, 1.2rem, 400);
+                    overflow: hidden;
+
+                    span {
+                        visibility: visible;
+                        border-radius: 50%;
+                        @include font($scnd-clr, 4.92rem, 400);
+                    }
+                }
+            }
+        }
+
+        .feilds-list {
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            .imgC {
+                overflow: hidden;
+
+                &:hover {
+
+                    transform: scale(0.97);
+
+                    .ft {
+                        visibility: visible;
+                        margin-top: -3.85rem;
+                    }
+                }
+
+                .ft {
+                    overflow: hidden;
+                    position: relative;
+                    visibility: hidden;
+                    width: 100%;
+                    @include flex(row, flex-start, center);
+                    gap: 2rem;
+                    background-color: rgba(6, 9, 34, 0.75);
+
+
+
+                    .arrow {
+                        background-color: $scnd-clr;
+                        padding: 1rem;
+                        @include font(#fff, 1rem, 500);
+                        cursor: pointer;
+                    }
+
+                    .tt {
+                        text-align: start;
+                        @include font(#fff, 1rem, 500);
+
+                        p {
+                            @include font(#fff, 1rem, 500);
+                        }
+
+                    }
+                }
+
+                img {
+                    height: 450px;
+                    min-width: 100%;
+
+                    &:hover {
+                        transition: scale 0.5s ease-in-out 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.active {
+    @include font($scnd-clr !important, 1.2rem, 400);
+}

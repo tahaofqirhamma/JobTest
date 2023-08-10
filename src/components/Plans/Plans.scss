@@ -1,0 +1,126 @@
+@import "../../SCSS/utilities";
+
+.plans {
+    background-color: $prm-clr;
+
+    section {
+        @include flex(row, space-between, center);
+        gap: 1.5rem !important;
+
+        .pro {
+            background-color: $scnd-clr;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+            hr {
+                width: 60%;
+                margin-top: -1rem;
+                height: 3px;
+                border: none;
+                background-color: #fff !important
+            }
+
+            .icon {
+                svg {
+                    fill: #fff !important;
+                }
+            }
+
+            .price {
+                @include flex(row, space-between, flex-start);
+                gap: 0.5rem;
+
+                span {
+                    @include font(#fff !important, 1.5rem, 500)
+                }
+
+                p {
+                    @include font(#fff, 4.5rem, 600)
+                }
+            }
+
+            button {
+                cursor: pointer;
+                background-color: transparent;
+                border: 3px #fff solid !important;
+                padding: 1rem 4rem;
+                @include font(#fff !important, 1.2rem, 500);
+                border-bottom-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+
+                &:hover {
+                    background-color: #fff;
+                    @include font($scnd-clr !important, 1.2rem, 500);
+                }
+
+
+            }
+        }
+
+        .plan {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+            @include flex(column, center, center);
+            gap: 2rem;
+            border: 0.01px $scnd-clr solid;
+            border-radius: 0.35rem;
+            padding: 1rem;
+
+            .icon {
+                svg {
+                    fill: $scnd-clr;
+                }
+            }
+
+            p.titel {
+                @include font(#fff, 1.5rem, 500)
+            }
+
+            .price {
+                @include flex(row, space-between, flex-start);
+                gap: 0.5rem;
+
+                span {
+                    @include font($scnd-clr, 1.5rem, 500)
+                }
+
+                p {
+                    @include font(#fff, 4.5rem, 600)
+                }
+            }
+
+            p.subsubtitel {
+                @include font(#c3c6d0, 1rem, 500);
+                font-style: italic;
+                margin-top: -2rem;
+            }
+
+            hr {
+                width: 60%;
+                margin-top: -1rem;
+                height: 3px;
+                background-color: $scnd-clr;
+                border: none;
+            }
+
+            p.desc {
+                @include font(#c3c6d0, 1rem, 500);
+                text-align: center;
+                line-height: 4.5;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: transparent;
+                border: 3px $scnd-clr solid;
+                padding: 1rem 4rem;
+                @include font($scnd-clr, 1.2rem, 500);
+                border-bottom-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+
+                &:hover {
+                    background-color: $scnd-clr;
+                    @include font(#fff, 1.2rem, 500);
+                }
+            }
+        }
+    }
+}

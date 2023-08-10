@@ -1,0 +1,131 @@
+@import "../../SCSS/utilities";
+
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.607), rgba(0, 0, 0, 0.607)), url('../../assets/images/footer-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 0;
+    height: 100%;
+
+    @include flex(column, center, flex-start);
+    gap: 2rem;
+
+    section {
+        color: #fff !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+
+        .info {
+            @include flex(column, center, flex-start);
+            gap: 2rem;
+
+            p.desc {
+                @include font(#fff, 1rem, 400);
+            }
+
+            .email {
+                p.tt {
+                    @include font(#fff, 0.91rem, 400);
+                }
+
+                input.e {
+                    padding: .5rem 1rem;
+                    width: 16rem;
+                    height: 2.75rem;
+                    background-color: #ffffffa8;
+                    border: none;
+
+                    &::placeholder {
+                        @include font(#fff, 1.2rem, 400);
+                    }
+                }
+
+                input.sub {
+                    padding: .5rem 1rem;
+                    width: 6rem;
+                    height: 2.75rem;
+                    background-color: $scnd-clr;
+                    border: none;
+                    @include font(#fff, 0.85rem, 500);
+                }
+
+                p.note {
+                    @include font(#fff, 0.91rem, 400);
+                }
+            }
+        }
+
+        .lr {
+            @include flex(row, center, center);
+            gap: 3rem;
+
+            .links,
+            .resources {
+                @include flex(column, center, space-between);
+                gap: 2Rem;
+
+                p.title {
+                    @include font(#fff, 1.2em, 500);
+                }
+
+                li {
+                    list-style-type: none;
+                    word-spacing: 0.5rem;
+
+                    span {
+                        @include font($scnd-clr, 0.91rem, 400);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    @include font(#fff, 0.8rem, 500);
+                }
+
+            }
+        }
+
+        .cnt {
+            @include flex(column, center, space-between);
+            gap: 2Rem;
+
+            p.title {
+                @include font(#fff, 1.2em, 500);
+            }
+
+            li {
+                @include flex(row, flex-start, center);
+                gap: 1Rem;
+
+                svg {
+                    fill: $scnd-clr;
+                }
+            }
+
+            .scl {
+                @include flex(row, flex-start, center);
+                gap: 0.5rem;
+
+                button {
+                    background-color: $scnd-clr;
+                    border: none;
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+
+                    svg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .cpr {
+        @include font(#fff, 0.91rem, 400);
+
+    }
+
+}

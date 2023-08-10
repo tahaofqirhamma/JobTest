@@ -1,0 +1,72 @@
+@import '../../SCSS/utilities';
+
+.loading {
+    height: 100Vh;
+    width: 100vw;
+    @include flex(row, center, center);
+    background-color: $prm-clr ;
+    overflow: hidden !important;
+    display: none;
+
+    span {
+        @include font(#fff, 2rem, 600);
+    }
+
+    .l,
+    .r {
+        width: 50vw;
+        height: 100%;
+
+        background-color: $scnd-clr;
+    }
+
+    .r {
+        animation: move-in-steps 8s ease-in;
+    }
+
+    .l {
+        animation: move-in-steps2 8s ease-in;
+    }
+
+    @keyframes move-in-steps {
+        0% {
+            z-index: -1;
+            transform: translateX(0);
+
+        }
+
+        100% {
+            z-index: 1;
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes move-in-steps2 {
+        0% {
+            z-index: -1;
+            transform: translateX(0);
+            display: none;
+
+        }
+
+        100% {
+            z-index: 1;
+            transform: translateX(-100%);
+            background-color: rebeccapurple;
+            display: none;
+        }
+    }
+
+    @keyframes move-in-steps3 {
+        0% {
+
+            display: flex;
+
+        }
+
+        100% {
+
+            display: none;
+        }
+    }
+}

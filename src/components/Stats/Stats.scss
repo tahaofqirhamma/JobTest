@@ -1,0 +1,43 @@
+@import "../../SCSS/utilities";
+
+.stats {
+    // background-image: url('../../assets/images/pattern-bg-3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/pattern-bg-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 0;
+
+    section {
+        @include flex(row, space-between, center);
+        gap: 3rem;
+
+        .card {
+            @include flex(column, center, center);
+            border: 0.01px $scnd-clr solid;
+            border-top: 0.25rem $scnd-clr solid;
+            background-color: rgba(6, 9, 34, 0.25);
+            padding: 4rem;
+            height: 230px;
+            width: 350px;
+            text-align: center;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+
+
+            .icon {
+                svg {
+                    fill: $scnd-clr !important;
+                }
+            }
+
+            .num {
+                @include font(#fff, 2.75rem, 600);
+            }
+
+            .subtitel {
+                @include font(#fff, 1rem, 500);
+            }
+        }
+
+    }
+}

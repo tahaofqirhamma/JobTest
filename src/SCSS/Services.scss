@@ -1,0 +1,56 @@
+@import "utilities";
+
+.services {
+    background-color: $prm-clr;
+    padding: 5rem 0;
+
+    section {
+        .services-head {
+            @include flex(row, space-between, center);
+            gap: 3rem;
+
+            .infos {
+                @include flex(column, center, flex-start);
+                gap: 0.5rem;
+
+                p.subsubtitel {
+                    @include font($scnd-clr, 1.2rem, 600)
+                }
+
+                p.titel {
+                    @include font(#fff, 2.7rem, 500);
+                }
+
+                p.subtitel {
+                    @include font(#c3c6d0, 1rem, 400)
+                }
+            }
+
+            button {
+                @include flex(row, space-between, center);
+                gap: 1rem;
+                cursor: pointer;
+                background-color: $scnd-clr;
+                border: 3px $scnd-clr solid;
+                padding: 1rem 3rem;
+                @include font(#fff, 1.2rem, 600);
+                border-bottom-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .services-list {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 2rem 0;
+            column-gap: 1rem;
+            row-gap: 2rem;
+
+        }
+    }
+}

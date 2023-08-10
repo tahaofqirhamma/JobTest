@@ -1,0 +1,29 @@
+@import "../../SCSS/utilities";
+
+.parallex {
+    @include flex(column, center, center);
+
+    p.subtitel {
+        @include font($scnd-clr, 1.2rem, 600)
+    }
+
+    p.titel {
+        @include font(#fff, 2.7rem, 500);
+    }
+
+    .slides {
+        overflow: hidden !important;
+        width: 70%;
+
+    }
+
+    gap: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.578)),
+    url(/src/assets/images/prlx.jpg);
+    background-attachment: fixed;
+    min-height: 70Vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}

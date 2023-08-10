@@ -1,0 +1,56 @@
+@import "../../SCSS/utilities";
+
+.service {
+    @include flex(column, center, flex-start);
+    border: 0.01px $scnd-clr solid;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 400px;
+    gap: 1rem;
+    box-shadow: 0px 0px 1px 0px $scnd-clr;
+
+    .icon {
+        svg {
+            fill: $scnd-clr !important;
+        }
+    }
+
+    .titel {
+        @include font(#fff, 1.4rem, 500)
+    }
+
+    .description {
+        @include font(#c3c6d0, 1rem, 400)
+    }
+
+    button {
+        cursor: pointer;
+        @include font($scnd-clr, 0.9rem, 600);
+        background-color: transparent;
+        border: none;
+        @include flex(row, space-between, center);
+        gap: 1rem;
+
+        svg {
+            fill: $scnd-clr ;
+        }
+    }
+
+    &:hover {
+        background-color: $scnd-clr;
+
+        .icon {
+            svg {
+                fill: #fff !important;
+            }
+        }
+
+        button {
+            @include font(#fff, 0.9rem, 600);
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}

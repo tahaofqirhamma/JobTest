@@ -1,0 +1,76 @@
+@import "../../SCSS/utilities";
+
+.blog {
+    position: relative;
+
+    @include flex(column, center, flex-start);
+
+    a {
+        .blog-img {
+            &:hover {
+                transform: scale(0.990);
+            }
+
+            img {
+                width: 90%;
+            }
+
+        }
+    }
+
+    .blog-date {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        @include font(#fff, 0.91rem, 400);
+        border-radius: 1rem;
+        padding: 0.3rem 1rem;
+        background-color: #00000074;
+    }
+
+    .blog-summary {
+        @include flex(column, center, flex-start);
+        gap: 1rem;
+        background-color: #062241;
+        width: 90%;
+        margin-top: -1rem;
+        padding: 1rem;
+
+        .owner {
+            @include flex(row, flex-start, center);
+            gap: 1rem;
+
+            p {
+                @include font(#c3c6d0, 0.75rem, 400)
+            }
+        }
+
+        a.blog-link {
+            @include font(#fff, 1.7rem, 500);
+            text-decoration: none;
+
+            &:hover {
+                @include font($scnd-clr, 1.7rem, 500);
+            }
+        }
+
+        p.blog-desc {
+            @include font(#c3c6d0, 1rem, 500);
+        }
+
+        button {
+            @include flex(row, space-between, center);
+            gap: 1Rem;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            @include font($scnd-clr, 1rem, 400);
+
+            svg {
+                fill: $scnd-clr;
+                @include font($scnd-clr, 1rem, 400);
+            }
+        }
+
+    }
+}

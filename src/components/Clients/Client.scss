@@ -1,0 +1,36 @@
+@import "../../SCSS/utilities";
+
+section.clt {
+    width: 100%;
+    background-color: $scnd-clr;
+
+    .clients {
+        background-color: $scnd-clr;
+        @include flex(column, center, center);
+        gap: 2rem;
+        padding: 2rem 0;
+
+        .titel {
+            @include font(#fff, 1.7rem, 400);
+            opacity: 0.35;
+        }
+
+        .clt-logos {
+            @include flex(row, space-between, center);
+            gap: 3rem;
+
+            img {
+                width: 170px !important;
+                min-height: 125px;
+                border-radius: 0.25rem;
+                filter: grayscale(1);
+                cursor: pointer;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+
+}
